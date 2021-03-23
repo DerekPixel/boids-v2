@@ -51,3 +51,8 @@ box-sizing: border-box;
 }
 /*#endregion*/
 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center:
+}
