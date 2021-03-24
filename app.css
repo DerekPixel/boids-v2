@@ -52,7 +52,31 @@ box-sizing: border-box;
 /*#endregion*/
 
 body {
+  background-color: rgb(25,25, 25);
+  color: white;
+  height: 100vh;
+}
+
+header {
   display: flex;
-  justify-content: center;
-  align-items: center:
+  /* width: 100%; */
+}
+
+main {
+  /* align-items: center; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin: 0 auto;
+  max-width: fit-content;
+}
+
+#mycanvas {
+  background-color: grey;
+}
+
+.sliders {
+  display: flex;
+  justify-content: space-between;
+  /* margin: 15px auto; */
 }
