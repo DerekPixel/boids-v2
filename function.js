@@ -2,7 +2,7 @@ export function makeNewSlider(name, min, max, value) {
   var div = document.createElement('div');
 
   var label = document.createElement('label');
-  label.textContent = `${name}`;
+  label.textContent = `${name}: `;
 
   var slider = document.createElement('input');
   slider.type = 'range';
