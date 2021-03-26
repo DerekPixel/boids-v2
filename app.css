@@ -51,6 +51,14 @@ box-sizing: border-box;
 }
 /*#endregion*/
 
+a {
+  color: rgb(25, 75, 150);
+}
+
+a:visited {
+  color: rgb(25, 75, 150);
+}
+
 body {
   background-color: rgb(25,25, 25);
   color: white;
@@ -58,25 +66,43 @@ body {
 }
 
 header {
+  align-items: center;
+  background-color: rgb(20, 20, 20);
   display: flex;
-  /* width: 100%; */
+  justify-content: space-between;
+  padding: 5px 5px 15px 5px;
+  margin: 5px 5px 20px 5px;
+}
+
+h1 {
+  font-size: 56px;
+  border-bottom: 5px solid rgb(25, 75, 150);
+}
+
+.creds-div {
+  display: flex;
+}
+
+.cred {
+  margin: 0 15px;
 }
 
 main {
-  /* align-items: center; */
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   margin: 0 auto;
   max-width: fit-content;
+  max-width: -moz-fit-content;
 }
 
 #mycanvas {
   background-color: grey;
+  border: 10px solid rgb(25, 75, 150);
+
 }
 
 .sliders {
   display: flex;
   justify-content: space-between;
-  /* margin: 15px auto; */
+  margin: 15px 0;
 }
