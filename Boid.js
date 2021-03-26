@@ -58,7 +58,7 @@ class Boid {
       steering.divideBy(total);
       steering.setMagnitude(this.maxSpeed);
       steering.subtractFrom(this.velocity);
-      steering = steering.normalize(this.alignForce);
+      steering = steering.clampAndNorm(this.alignForce);
     }
 
     return steering;
@@ -92,7 +92,7 @@ class Boid {
       steering.subtractFrom(this.position);
       steering.setMagnitude(this.maxSpeed);
       steering.subtractFrom(this.velocity);
-      steering = steering.normalize(this.coForce);
+      steering = steering.clampAndNorm(this.coForce);
     }
     
     return steering;
@@ -129,7 +129,7 @@ class Boid {
       steering.divideBy(total);
       steering.setMagnitude(this.maxSpeed);
       steering.subtractFrom(this.velocity);
-      steering = steering.normalize(this.sepForce);
+      steering = steering.clampAndNorm(this.sepForce);
     }
 
     return steering;
@@ -150,6 +150,9 @@ class Boid {
     this.acceleration.addTo(alignment);
     this.acceleration.addTo(cohesion);
     this.acceleration.addTo(separation);
+    // this.acceleration = this.acceleration.clampAndNorm(1);
+    // this.acceleration.setMagnitude(0.1);
+    // this.acceleration = this.acceleration.normalize();
   }
 
   edges() {
