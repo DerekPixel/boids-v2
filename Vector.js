@@ -102,8 +102,8 @@ Vector.prototype.toObject = function() {
   return {x: this.x, y: this.y};
 };
 
-// normalize a given vector
-Vector.prototype.normalize = function(max){
+// clamp and normilize a vector
+Vector.prototype.clampAndNorm = function(max){
   var x = this.x;
   var y = this.y;
   
@@ -112,6 +112,11 @@ Vector.prototype.normalize = function(max){
   var f = Math.min(length, max) / length;
 
 	return new Vector(f * x, f * y);;
+}
+
+// normalize a given vector
+Vector.prototype.normalize = function(){
+	return new Vector(this.x/(Math.sqrt(this.x * this.x + this.y * this.y)), this.y/(Math.sqrt(this.x * this.x + this.y * this.y)));
 }
 
 export default Vector;
