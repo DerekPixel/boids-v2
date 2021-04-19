@@ -51,32 +51,40 @@ box-sizing: border-box;
 }
 /*#endregion*/
 
+:root {
+  --accent-blue: rgb(25, 102, 255);
+  --main-background-color: rgb(35, 35, 35);
+  --darker-background-color: rgb(20, 20, 20);
+}
+
 a {
-  color: rgb(25, 75, 150);
+  color: lightsalmon;
+  text-decoration: none;
 }
 
 a:visited {
-  color: rgb(25, 75, 150);
+  color: lightsalmon;
+  text-decoration: none;
 }
 
 body {
-  background-color: rgb(25,25, 25);
+  background-color: var(--main-background-color);
   color: white;
   height: 100vh;
 }
 
 header {
   align-items: center;
-  background-color: rgb(20, 20, 20);
+  background-color: var(--darker-background-color);
   display: flex;
   justify-content: space-between;
-  padding: 5px 5px 15px 5px;
+  padding: 10px 10px 20px 10px;
   margin: 5px 5px 20px 5px;
 }
 
 h1 {
   font-size: 56px;
-  border-bottom: 5px solid rgb(25, 75, 150);
+  border-bottom: 5px solid var(--accent-blue);
 }
 
 .creds-div {
@@ -97,7 +105,7 @@ main {
 
 #mycanvas {
   background-color: grey;
-  border: 10px solid rgb(25, 75, 150);
+  border: 10px solid var(--accent-blue);
 
 }
 
